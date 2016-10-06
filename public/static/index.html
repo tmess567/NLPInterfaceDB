@@ -3,7 +3,19 @@
 <head>
 	<title>Web Speech API Interface</title>
 	<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>  
-	<script type="text/javascript" src="public/static/index.js"></script>
+	<script type="text/javascript">
+		var express = require('express');
+		var router = express.Router();
+		var path = require('path');
+
+		/* GET home page. */
+		router.get('/', function(req, res) {
+		  //res.render('index', { title: 'Express' });
+		  res.sendfile(path.resolve('public/static/index.html'));
+		});
+
+		module.exports = router;
+	</script>
 </head>
 <body>
 <h1>Interfacing Web Speech API to Syntaxnet</h1>
