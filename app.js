@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var NLPdemo = require('./routes/NLPdemo');
+var DBdemo = require('./routes/DBdemo')
 
 var app = express();
 
@@ -23,7 +24,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/NLPdemo', NLPdemo);
-
+app.use('/DBdemo', DBdemo);
 /// catch 404 and forwarding to error handler
 app.use(function(req, res, next) {
     var err = new Error('Not Found');
