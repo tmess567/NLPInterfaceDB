@@ -31,7 +31,6 @@ app.use(function(req, res, next) {
     err.status = 404;
     next(err);
 });
-
 /// error handlers
 
 // development error handler
@@ -55,6 +54,5 @@ app.use(function(err, req, res, next) {
         error: {}
     });
 });
-
 
 module.exports = app;
